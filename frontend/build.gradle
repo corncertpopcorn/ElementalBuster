@@ -1,0 +1,15 @@
+plugins {
+    id 'base'
+}
+
+task buildFrontend(type: Exec) {
+    workingDir 'C:/Users/ban/Desktop/연습/장난감/chaos_dice_project/frontend'
+    commandLine 'cmd', '/c', '"C:/Program Files/nodejs/npm.cmd"', 'run', 'build'
+}
+
+task cleanFrontend(type: Delete) {
+    delete fileTree('frontend/build')
+}
+
+clean.dependsOn cleanFrontend
+build.dependsOn buildFrontend
