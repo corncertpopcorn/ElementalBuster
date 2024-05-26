@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상세 페이지</title>
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="./recommandationDetail.css">
+    <script type="text/javascript" src="./common.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <header id="header">
+      <script>loadHTML("./header.html");</script>
+  </header>
+  <main>
+    <div class="main_container">
+      <section class="btn_container">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="횟수 입력" aria-label="Recipient's username" aria-describedby="button-addon2">
+          <button class="btn btn-primary" type="button" id="button-addon2">랜덤으로 돌리기</button>
+        </div>
+        <button class="btn btn-primary dislike_btn" type="button">
+          싫어요 <img width="15px" height="auto" src="./dislike_off.png" alt="싫어요 버튼">
+        </button>
+      </section>
+      <section class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">익선반주1</div>
+            <div class="swiper-slide">익선반주2</div>
+            <div class="swiper-slide">익선반주3</div>
+            <div class="swiper-slide">익선반주4</div>
+            <div class="swiper-slide">익선반주5</div>
+          </div>
+          <div class="swiper-pagination"></div>
+      </section>
+      <section class="top_container">
+        <div class="img_container"></div>
+        <div class="title_container">
+          <h2>익선반주</h2>
+          <ul class="breadcrumb">
+            <li class="restaurant_type breadcrumb-item">퓨전한식</li>
+            <li class="breadcrumb-item">평점 <span class="text-primary rating"></span></li>
+            <li class="breadcrumb-item">리뷰 <span class="text-primary review_count"></span>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <!-- <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" data-bs-toggle="tab" href="#home" aria-selected="true" role="tab" tabindex="-1">홈</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" data-bs-toggle="tab" href="#review" aria-selected="false" role="tab">리뷰</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" data-bs-toggle="tab" href="#location" aria-selected="false" role="tab">지도</a>
+          </li>
+        </ul> -->
+        <div class="tab-content">
+          <div class="tab-pane fade active show detail_info" id="home" role="tabpanel">
+            <h6 class="text-dark">상세 정보</h6>
+            <p>
+              <em class="location">위치</em>
+              <span></span>
+            </p>
+            <p>
+              <em class="hour">영업전</em>
+              <span class="weekday"></span>
+            </p>
+            <p>
+              <em class="num">대표번호</em>
+              <span></span>
+            </p>
+            <p>
+              <em class="reservation">예약</em>
+              <span></span>
+            </p>
+
+          </div>
+          <div class="tab-pane fade active show" id="review" role="tabpanel">
+            <h6 class="text-dark">리뷰 
+              <span class="text-primary review_count"></span>
+            </h6>
+            <ul class="review_list">
+              <!-- <li>
+                <div>
+                  <img width="100%" height="auto" src="/images/review_thumnail.jpg" alt="[익선동 맛집] 익선반주 / 익선동 한옥거리 분위기 좋은 술집">
+                </div>
+                <div class="review_container">
+                  <strong class="reivew_title">[익선동 맛집] 익선반주 / 익선동 한옥거리 분위기 좋은 술집</strong>
+                    <small class="reivew_content">
+                      청첩장 모임으로 친구 예비신랑까지 총 5명이 모인 익선동맛집 '익선반주' 날은 어둑했지만 마음만은 화창했던 날이었다? #내돈내산 #친구돈친구산 #청첩장모임 익선동 한옥거리는 길 찾기가 좀 어렵다 하지만 이게 바로 익선동의 매력 골목 곳곳에 소담하게 자리 잡은 맛집들이 참 많다 비가 쏟아지기 전이었던 터라 자연광 중심으로 실내를 밝히는 익선반주는 다소 어둡긴 했다 특히 우리는 단체석이라 사이드여서 더 어둑했던 걸 수도.. 익선동 한옥거리 맛집 익선반주에서는 다양한 전통주를 만날 수 있었다 음식들도 모두 한식 기반의 퓨전 요리로 준비되어 있어서 전통주와 페어링 하는 재미도 쏠쏠할 듯 어떤 메뉴를 골라야 좋으려나 행복한 고민 - ♡ 식중주는 '한강주조 나루약주'로 골랐다 ★★★★★ 깔끔한 첫맛과 버터리한 향기,
+                    </small>
+                    <p>
+                      <small class="user_name text-dark">♥ 내가 사랑한 순간들</small>
+                      <span>|</span>
+                      <small>2024.05.16.</small>
+                    </p>
+                </div>
+              </li> -->
+            </ul>
+          </div>
+          <div class="tab-pane fade location active show" id="location" role="tabpanel">
+            <h6 class="text-dark">찾아가는 길</h6>
+            <div style="width: 100%; height: 350px;" class="map_cotent" id="map">
+            </div>
+            <h6 class="text-dark">지하철 역</h6>
+            <div>
+              <ul class="subway_list">
+                <li>종로3가역
+                  <span style="background-color: #8936e0;" class="subway">5</span>
+                  <span style="background-color: #263c96;" class="subway">1</span>
+                  <span style="background-color: #F06E00;" class="subway">3</span>
+                  <span class="bar">|</span>
+                   
+                   6번 출구 도보 3분</li>
+                <li>종각역 <span style="background-color: #263c96;" class="subway">1</span> 
+                  <span class="bar">|</span>
+                  11번 출구 도보 11분
+                </li>
+                <li>안국역 
+                  <span style="background-color: #F06E00;" class="subway">3</span>
+                  <span class="bar">|</span>  
+                  4번 출구 도보 9분
+                </li>
+              </ul>
+            </div>
+            <h6 class="text-dark">버스 정류장</h6>
+            <ol class="bus_list">
+              <li>
+                <p>종로1.2.3.4가동주민센터(01557) <span class="bar">|</span> <small>104m</small> </p>
+                <span class="bus_town">마을</span>
+                종로12
+                </li>
+                <li>
+                  <p>종로사우나(01790) <span class="bar">|</span> <small>234m</small></p>
+                  <span class="bus_town">마을</span>
+                
+                종로01
+
+                </li>
+                <li>
+                  <p>낙원상가(01589) <span class="bar">|</span> <small>261m</small></p>
+                  <span class="bus_town">마을</span>
+                   종로01 <span class="bar">|</span> 종로02
+                </li>
+                <li>
+                  <p>종로3가.1.3.5호선(01550) <span class="bar">|</span> <small>278m</small></p>
+                  <span class="bus_town">마을</span>
+                  종로12
+                </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="text-lg-center py-lg-2" id="footer">
+      <script>loadHTML("./footer.html");</script>
+  </footer>
+  <script src="/js/detail.js"></script>
+  <script type="text/javascript">
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+</html>

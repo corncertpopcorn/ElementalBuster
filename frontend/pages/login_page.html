@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./bootstrap.css">
+	<link rel="stylesheet" href="./index_page.css">
+	<!-- 모달 링크 추가 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<script type="text/javascript" src="./common.js"></script>
+	<title>tastyDilemmaFront</title>
+</head>
+<body>
+<div class="container-fluid">
+
+	<div class="row w-100">
+		<!-- 좌측 영역 -->
+		<div class="col-md-7 center-content works_container">
+			<div class="works_main">
+				<div>
+					<img src="./index.png" class="rounded float-start" alt="Your Image">
+				</div>
+				<p>맛있는고민</p>
+			</div>
+		</div>
+		<!-- 우측 영역 -->
+		<div class="col-md-5 center-content">
+			<div class="fade-in fs-1">시작 하기</div>
+			<a href="javascript:loginWithKakao()" id="kakao-login-btn">
+				<img src="./kakao_login_large_narrow.png" alt="kakao login"> <!-- 카카오 로그인 버튼 -->
+			</a>
+			<footer>© 맛있는 고민 2024 All Rights Reserved</footer>
+		</div>
+	</div>
+</div>
+
+<!-- 취향 선택 팝업 -->
+<div class="modal fade" id="favoriteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="favoriteModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="favoriteModalLabel">당신의 취향?</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<!-- 버튼 삭제 예정 -->
+				<!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+			</div>
+			<div class="modal-body">
+				<p>           선호하는 음식을 선택 후 저장하세요!</p>
+				<div class="d-flex justify-content-center">
+					<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+						<input type="checkbox" class="btn-check" id="korean" autocomplete="off">
+						<label class="btn btn-primary" for="korean">한식</label>
+						<input type="checkbox" class="btn-check" id="japanese" autocomplete="off">
+						<label class="btn btn-primary" for="japanese">일식</label>
+						<input type="checkbox" class="btn-check" id="chinese" autocomplete="off">
+						<label class="btn btn-primary" for="chinese">중식</label>
+						<input type="checkbox" class="btn-check" id="western" autocomplete="off">
+						<label class="btn btn-primary" for="western">양식</label>
+						<input type="checkbox" class="btn-check" id="fastfood" autocomplete="off">
+						<label class="btn btn-primary" for="fastfood">패스트푸드</label>
+						<img style="width: 60%; display: block; margin: 0 auto" src="/images/cutefood.png" alt="Cute Food">
+						<p class="fade-in fs-4">선호하는 음식을 선택 후 저장하세요!</p>
+						<fieldset>
+							<!-- <legend class="mt-4">Checkboxes</legend> -->
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="korean">
+								<label class="form-check-label" for="korean">
+									한식
+								</label>
+							</div>
+					</div>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" value="" id="japanese">
+					<label class="form-check-label" for="japanese">
+						일식
+					</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" value="" id="chinese">
+					<label class="form-check-label" for="chinese">
+						중식
+					</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" value="" id="western">
+					<label class="form-check-label" for="western">
+						양식
+					</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" value="" id="fastfood">
+					<label class="form-check-label" for="fastfood">
+						패스트푸드
+					</label>
+				</div>
+				</fieldset>
+				<div class="modal-footer">
+					<!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button> -->
+					<button type="button" class="btn btn-primary">저장</button>
+					<button type="button" class="btn btn-primary" onclick="loginSuccess()">저장</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+	<script> Kakao.init('03fdfb33b71062811cbd6ae06b7a466c'); </script>
+	<script> console.log( Kakao.isInitialized() ); </script>
+	<script src="./kakaologin.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
