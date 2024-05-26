@@ -1,5 +1,7 @@
 package org.example.chaos_dice_project.entity;
 
+
+
 import jakarta.persistence.*;
 
 import java.sql.Timestamp;

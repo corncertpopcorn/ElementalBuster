@@ -1,10 +1,9 @@
 package org.example.chaos_dice_project.entity;
 
-import jakarta.persistence.*;
 
+import jakarta.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
-
 @Entity
 @Table(name = "reply", schema = "chaos_dice_project", catalog = "")
 public class ReplyEntity {

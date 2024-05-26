@@ -1,9 +1,8 @@
 package org.example.chaos_dice_project.entity;
 
+
 import jakarta.persistence.*;
-
 import java.util.Objects;
-
 @Entity
 @Table(name = "user_info", schema = "chaos_dice_project", catalog = "")
 public class UserInfoEntity {

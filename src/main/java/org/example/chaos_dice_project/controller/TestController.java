@@ -1,24 +1,13 @@
 package org.example.chaos_dice_project.controller;
 
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.HashMap;
-import java.util.Map;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import java.util.Date;
 
 @RestController
-@RequestMapping("/api")
 public class TestController {
-
-    @GetMapping("/test")
-    public Map<String, String> getTestData() {
-        Map<String, String> response = new HashMap<>();
-        response.put("message", "Hello from GET");
-        return response;
-    }
-
-    @PostMapping("/test")
-    public String createTestData(@RequestBody Map<String, String> request) {
-        return "Received data: " + request.toString();
-    }
-}
+    @GetMapping("/api/hello")
+    public String hello(){
+        return "안녕하세요. 현재 서버시간은 "
+                +new Date() +"입니다. \n";
+    }}

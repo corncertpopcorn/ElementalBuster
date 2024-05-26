@@ -27,11 +27,19 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-mail'
     implementation 'org.mariadb.jdbc:mariadb-java-client:2.7.2'
     implementation 'org.springframework.boot:spring-boot-starter-logging'
-    implementation 'ch.qos.logback:logback-classic:1.4.11'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    //implementation 'org.springframework.boot:spring-boot-starter-security'
+}
+bootRun {
+    environment 'SPRING_RESOURCES_STATIC_LOCATIONS', 'classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:///C:/Users/ban/Desktop/연습/장난감/chaos_dice_project/frontend/public/'
+}
+
+bootJar {
+    launchScript()
 }
 
 

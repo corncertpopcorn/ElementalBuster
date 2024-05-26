@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+<p th:text="${message}"></p> <!-- 모델에서 전달된 메시지를 표시 -->
+<div>
+    <!-- 이미지 추가 -->
+    <img th:src="@{/kakao_login_large_narrow.png}" alt="Description of image"/>
+</div>
+</body>
+</html>
