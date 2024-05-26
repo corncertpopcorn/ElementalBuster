@@ -16,8 +16,29 @@ public class StaticController {
         return "home"; // home.html 템플릿을 반환
     }
 
-    @GetMapping("/")
-    public String home() {
-        return "redirect:/home.html";
+    @GetMapping("/post_list_page")
+    public String testPage(Model model) {
+        return "post_list_page";
+    }
+
+    @GetMapping("/store_page")
+    public String storePage(Model model) {
+        return "store_page";
+    }
+
+    @GetMapping("/login_page")
+    public String loginPage(Model model) {
+        return "login_page";
+    }
+
+    @GetMapping("/post_write_page")
+    public String postWritePage(Model model) {
+        return "post_write_page";
+    }
+
+    @GetMapping("/post_detail_page")
+    public String postDetailPage(Model model) {
+        return "post_detail_page";
     }
 }
+
