@@ -24,4 +24,6 @@ public class AllController {
             return ResponseEntity.ok(e.getMessage());
         }
     }
+
+
 }
