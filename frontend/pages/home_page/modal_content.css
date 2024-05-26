@@ -1,0 +1,96 @@
+/* 모달 배경 스타일 */
+.modal {
+  display: none; /* 모달 초기에는 화면에 보이지 않도록 설정 */
+  position: fixed; /* 화면 스크롤에 영향을 받지 않도록 고정 위치 설정 */
+  z-index: 1000; /* 다른 요소 위에 띄우기 위해 z-index 설정 */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* 화면을 벗어나는 내용은 스크롤을 통해 볼 수 있도록 설정 */
+  background-color: rgba(0, 0, 0, 0.5); /* 투명도가 있는 검은색 배경 설정 */
+}
+
+/* 모달 내용 스타일 */
+.modal-content {
+  background-color: #ffffff; /* 내용 배경색을 흰색으로 설정 */
+  position: fixed; /* 화면 중앙에 위치하기 위해 fixed로 변경 */
+  top: 50%; /* 화면 상단에서 50% 떨어진 위치에 모달 배치 */
+  left: 50%; /* 화면 좌측에서 50% 떨어진 위치에 모달 배치 */
+  transform: translate(-50%, -50%); /* 가로 및 세로 중앙 정렬 */
+  padding: 20px;
+  border-radius: 10px; /* 테두리 모서리의 굴곡 정도 설정 */
+  max-width: 700px; /* 모달 내용의 최대 가로폭 지정 */
+  text-align: center; /* 내용을 가운데 정렬 */
+}
+
+
+/* x 버튼 */
+.close {
+  color: #666666;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close:hover,
+.close:focus {
+  color: #333333;
+  text-decoration: none;
+}
+
+/* 모달 제목 */
+h2 {
+  margin-top: 0;
+  font-size: 24px;
+  text-align: center;
+  color: #333333;
+}
+
+/* 선택 버튼, 취소 버튼 */
+#selectButton, #categorySelectButton, #recommendButton, #cancelButton1, #cancelButton2, #cancelButton3 {
+  background-color: #210fc9;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+/* 버튼 컨테이너 */
+.button-container {
+  text-align: center;
+}
+
+/* 오버레이 */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+/* 모달 내 체크 박스 스타일 조정 */
+.modal-content .category-checkbox {
+  width: 20px; /* 너비 조정 */
+  height: 20px; /* 높이 조정 */
+}
+
+/* 레이블 스타일 조정 */
+.modal-content .category-checkbox + label {
+  position: relative;
+  padding-left: 25px; /* 체크 박스 왼쪽 여백 조정 */
+  top: -5px; /* 텍스트를 위쪽으로 이동 */
+}
+
+
+#myModal1 label {font-size: 0;}

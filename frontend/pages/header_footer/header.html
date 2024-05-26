@@ -1,0 +1,37 @@
+<nav class="header-nav navbar navbar-expand-lg" data-bs-theme="light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="./login_page.html">
+      <img width="50px" height="auto" src="logo.png" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="home_page/home_page.html">홈
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="post_list_page/post_list_page.html">게시판</a>
+        </li>
+      </ul>
+      <!-- <div class="d-grid gap-2"> -->
+
+      <!-- 프로필 사진과 닉네임  -->
+      <a href="./my_page.html" style="margin-right: 30px; margin-top: auto; font-size: 20px; text-decoration: none;">
+        <img style="width: 40px; border-radius: 50%; margin-right: 10px;" src="./profile.png" alt="마이페이지">
+        김돌이</a>
+
+
+      <!-- </div> -->
+
+      <button class="btn btn-warning" type="button" style="width: 150px;" onclick="kakaoLogout()">Logout</button>
+    </div>
+  </div>
+</nav>
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.1/kakao.min.js"></script>
+<script> Kakao.init('03fdfb33b71062811cbd6ae06b7a466c'); </script>
+<script src="kakaologout.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

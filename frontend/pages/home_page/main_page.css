@@ -1,0 +1,65 @@
+/* main_page.css */
+
+#main_page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    background:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("bg_food.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+/* 선택버튼 높낮이 */
+#regionSelector {
+    padding: 20px; /* 버튼 주변의 여백 */
+}
+
+#regionSelectorText {
+    display: inline-block;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+/* 버튼 컨테이너 */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* 버튼 사이의 간격 */
+}
+
+.regionSelectorContainer {
+    border: 1px solid #ffa000;
+    padding-bottom: 15px;
+}
+
+#regionSelector button {
+    color: #ffffff; /* 버튼 텍스트 색상을 흰색으로 설정합니다 */
+    padding: 1rem 4rem;
+}
+
+#regionSelector p {
+    margin-bottom: -20px; /* 문구 아래 여백을 추가합니다. */
+    padding: 0 10px;    
+    font-size: 30px; /* 문구의 글꼴 크기를 조정합니다. */
+    font-family: 'fake serif';
+    font-size: 215px;
+    color: #ffba47;
+}
+
+.color1 { color: red; }
+.color2 { color: orange; }
+.color3 { color: yellow; }
+.color4 { color: green; }
+.color5 { color: blue; }
+.color6 { color: indigo; }
+.color7 { color: violet; }
+.color8 { color: purple; }
+.color9 { color: cyan; }
+.color10 { color: magenta; }
+.color11 { color: darkorange; }
+.color12 { color: darkgreen; }
+.color13 { color: darkblue; }
+.color14 { color:rgb(20, 17, 13);}
+
