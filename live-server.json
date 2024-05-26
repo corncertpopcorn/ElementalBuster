@@ -1,0 +1,9 @@
+{
+  "port": 5500,
+  "host": "0.0.0.0",
+  "root": ".",
+  "file": "login_page.html",
+  "wait": 1000,
+  "mount": [],
+  "logLevel": 2
+}

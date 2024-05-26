@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="./boardwrite.css">
+    <script type="text/javascript" src="./common.js"></script>
+</head>
+<body>
+<header id="header">
+    <script>loadHTML("./header.html");</script>
+</header>
+
+<style>
+    .custom-width {
+        width: 55%; /* 원하는 너비로 조정 */
+        margin: 0 auto; /* 중앙 정렬 */
+    }
+
+    .btn-group .btn {
+        white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+    }
+
+</style>
+<div style="background-color: #f3f3f3;padding: 30px 0;">
+    <div bgcolor="ece6cc" class="container mt-5">
+
+        <div>
+            <h1 style="color: black; font-weight: bold;" class="mb-4">게시판 글쓰기</h1>
+            <form id="write-form" enctype="multipart/form-data" class="mb-5">
+                <div id="in_title">
+
+                    <div class="row">
+                        <div class="col-md-4" style="width: 50%;">
+                            <label for="exampleSelect1" class="form-label mt-4"></label>
+                            <select class="form-select" id="exampleSelect1">
+                                <option>게시판을 선택해 주세요.</option>
+                                <option>유저 맛집 추천</option>
+                                <option>맛집 같이 갈 유저 모집</option>
+                                <option>유저의 맛집 리뷰</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4" style="width: 50%;">
+                            <label for="exampleSelect2" class="form-label mt-4"></label>
+                            <select class="form-select" id="exampleSelect2">
+                                <option>공개 범위를 선택해주세요</option>
+                                <option>전체 공유</option>
+                                <option>멤버 공유</option>
+                            </select>
+                        </div>
+                    </div><br>
+
+                    <div style="position: relative;">
+                        <div class="btn-group-vertical position-absolute" style="top: -130px; right: 0;">
+                            <a style="background-color: #ffffff; color: #000000; font-size: 0.8rem; border: 1px solid #dee2e6;" href="post_list_page.html" class="btn btn-primary">글쓰기</a>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <textarea style="border: 1px solid #dee2e6;" class="title" name="title" id="utitle" rows="1" cols="55" placeholder="제목을 입력해 주세요." maxlength="100" required=""></textarea>
+                    <br>
+                    <div id="in_content">
+                        <textarea style="border: 1px solid #dee2e6;" name="content" id="ucontent" placeholder="내용" required=""></textarea>
+                    </div>
+                    <div class="mb-3" style="width: 100% !important;">
+                        <label style="color: black; width: 100%;" for="file" class="form-label"></label>
+                        <input type="file" id="file" name="file" accept="image/*" class="form-control" style="border: 1px solid #dee2e6;">
+                    </div>
+
+                    <!-- <p class="post-author">작성자:"홍길동"</p> -->
+
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+        const posts = [];
+
+        document.getElementById('write-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // 폼 제출 기본 동작 방지
+            const formData = new FormData(this);
+            const newPost = {
+                id: posts.length + 1, // 새 게시글의 ID는 현재 게시글 개수 + 1
+                title: formData.get('title'),
+                content: formData.get('content'),
+                authorID: 'currentUserID', // 현재 사용자의 ID 또는 세션 정보에서 가져온 ID
+                hits: 0, // 새 게시글의 조회수는 초기값으로 0 설정
+                hasFile: !!formData.get('file').name, // 파일 여부는 파일 입력 필드의 값으로 결정
+                visibility: formData.get('btnradio') // 공개 범위 설정
+            };
+     sss       posts.push(newPost); // 새 게시글을 배열에 추가
+            renderBoardList(); // 목록을 다시 렌더링하여 새 게시글을 추가합니다.
+            this.reset(); // 폼을 초기화합니다.
+        });
+
+        function renderBoardList() {
+            console.log(posts); // 실제로는 게시글 목록을 HTML로 렌더링하는 코드가 들어가야 합니다.
+        }
+    </script>
+</div>
+<footer class="text-lg-center py-lg-2" id="footer">
+    <script>loadHTML("./footer.html");</script>
+</footer>
+</body>
+</html>

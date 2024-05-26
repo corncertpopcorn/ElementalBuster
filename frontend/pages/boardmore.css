@@ -1,0 +1,135 @@
+header {
+  background-color: #000000;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 10rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-title-section, .post-content-section {
+  border: 10px solid #ddd;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.post-title-section {
+  background-color: #e9ecef;
+}
+
+.post-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #007bff;
+}
+
+.post-author, .post-date {
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.post-content-section {
+  background-color: #ffffff;
+}
+
+.post-content {
+  font-size: 2.125rem;
+  line-height: 5.6;
+  margin-top: 1rem;
+}
+
+footer {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* 추가된 스타일 */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-container .btn {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 3rem;
+  border-radius: 50px;
+}
+
+.comments-section {
+  margin-top: 2rem;
+}
+
+.comments-section h3 {
+  margin-bottom: 10rem;
+  color: #007bff;
+}
+
+.comment-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.comment-item {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+
+.comment-item p {
+  margin: 0.5rem 0;
+}
+
+.comment-form {
+  margin-top: 1rem;
+}
+
+.comment-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.comment-form .form-control {
+  border-radius: 5px;
+}
+
+.button-container {
+  text-align: center; /* 내부 버튼을 수평 가운데로 정렬합니다. */
+  margin-top: 20px;
+}
+
+.button-container .btn {
+  margin: 0 10px; /* 버튼 사이의 간격을 조정합니다. */
+}
+
+
+
+footer {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* 추가 */
+  align-items: center; /* 추가 */
+}
+
